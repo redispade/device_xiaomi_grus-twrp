@@ -1305,40 +1305,6 @@
 				<text>{@part_backup_size=Backup Size: %tw_partition_backup_size%MB}</text>
 			</text>
 
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row2_y%"/>
-				<text>{@bstorage_btn=BackupStorage}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/backup-datamedia-grus.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@bstorage_text=Internal Storage will be backed up to USB_OTG.}</action>
-					<action function="set">tw_text4={@bstorage_confirm=Try to backup it?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-				</actions>
-			</button>
-
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row2_y%"/>
-				<text>{@rstorage_btn=RestoreStorage}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/restore-datamedia-grus.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@rstorage_text=Internal Storage will be restored from USB_OTG.}</action>
-					<action function="set">tw_text4={@rstorage_confirm=Try to restore it?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-			</actions>
-			</button>
-			
 			<button style="main_button_half_height">
 				<condition var1="tw_partition_can_resize" op="=" var2="1"/>
 				<placement x="%indent%" y="%row18a_y%"/>
@@ -3409,6 +3375,40 @@
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
 				<text>{@tools_hdr=Tools}</text>
 			</text>
+			
+			<button style="main_button_half_height_s">
+				<placement x="%indent%" y="%row2_y%"/>
+				<text>{@bstorage_btn=BackupStorage}</text>
+				<actions>
+					<action function="set">tw_back=tools</action>
+					<action function="set">tw_filename=/tools/backup-datamedia-grus.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=tools_flash_zip</action>
+					<action function="set">tw_text1={@bstorage_text=Internal Storage will be backed up to USB_OTG.}</action>
+					<action function="set">tw_text4={@bstorage_confirm=Try to backup it?}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">tools_confirm_action</action>
+				</actions>
+			</button>
+
+			<button style="main_button_half_height_s">
+				<placement x="%center_x%" y="%row2_y%"/>
+				<text>{@rstorage_btn=RestoreStorage}</text>
+				<actions>
+					<action function="set">tw_back=tools</action>
+					<action function="set">tw_filename=/tools/restore-datamedia-grus.zip</action>
+					<action function="set">tw_action=queuezip</action>
+					<action function="set">tw_has_action2=1</action>
+					<action function="set">tw_action2=flash</action>
+					<action function="set">tw_action2_param=tools_flash_zip</action>
+					<action function="set">tw_text1={@rstorage_text=Internal Storage will be restored from USB_OTG.}</action>
+					<action function="set">tw_text4={@rstorage_confirm=Try to restore it?}</action>
+					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
+					<action function="page">tools_confirm_action</action>
+			</actions>
+			</button>
 
 			<button style="main_button_half_height_s">
 				<placement x="%indent%" y="%row5_y%"/>
