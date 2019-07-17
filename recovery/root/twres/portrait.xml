@@ -1307,7 +1307,7 @@
 
 			<button style="main_button_half_height_s">
 				<placement x="%indent%" y="%row2_y%"/>
-				<text>{@supersu_btn=BackupStorage}</text>
+				<text>{@bstorage_btn=BackupStorage}</text>
 				<actions>
 					<action function="set">tw_back=tools</action>
 					<action function="set">tw_filename=/tools/backup-datamedia-grus.zip</action>
@@ -1324,7 +1324,7 @@
 
 			<button style="main_button_half_height_s">
 				<placement x="%center_x%" y="%row2_y%"/>
-				<text>{@unroot_supersu_btn=RestoreStorage}</text>
+				<text>{@rstorage_btn=RestoreStorage}</text>
 				<actions>
 					<action function="set">tw_back=tools</action>
 					<action function="set">tw_filename=/tools/restore-datamedia-grus.zip</action>

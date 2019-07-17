@@ -648,12 +648,12 @@
 <!--mod tools-->
 		<string name="tools_hdr">Tools</string>
 		<string name="tools">Tools</string>
-		<string name="supersu_btn">SuperSU</string>
-		<string name="supersu_text">SuperSU will be installed.</string>
-		<string name="supersu_confirm">Try to install it?</string>
-		<string name="unroot_supersu_btn">Unroot SuperSU</string>
-		<string name="unroot_supersu_text">Unroot SuperSU will be launching</string>
-		<string name="unroot_supersu_confirm">Try to install it?</string>
+		<string name="bstorage_btn">BackupStorage</string>
+		<string name="bstorage_text">Internal Storage will be backed up to USB_OTG.</string>
+		<string name="bstorage_confirm">Try to backup it?</string>
+		<string name="rstorage_btn">RestoreStorage</string>
+		<string name="rstorage_text">Internal Storage will be restored from USB_OTG.</string>
+		<string name="rstorage_confirm">Try to restore it?</string>
 		<string name="magisk_btn">Magisk</string>
 		<string name="magisk_text">Magisk will be installed.</string>
 		<string name="magisk_confirm">Try to install it?</string>
