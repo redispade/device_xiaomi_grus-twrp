@@ -1315,8 +1315,8 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@backupstorage_text=Internal Storage will be backed up to USB_OTG.}</action>
-					<action function="set">tw_text4={@backupstorage_confirm=Try to backup it?}</action>
+					<action function="set">tw_text1={@bstorage_text=Internal Storage will be backed up to USB_OTG.}</action>
+					<action function="set">tw_text4={@bstorage_confirm=Try to backup it?}</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
 					<action function="page">tools_confirm_action</action>
 				</actions>
@@ -1332,8 +1332,8 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@restorestorage_text=Internal Storage will be restored from USB_OTG.}</action>
-					<action function="set">tw_text4={@restorestorage_confirm=Try to restore it?}</action>
+					<action function="set">tw_text1={@rstorage_text=Internal Storage will be restored from USB_OTG.}</action>
+					<action function="set">tw_text4={@rstorage_confirm=Try to restore it?}</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
 					<action function="page">tools_confirm_action</action>
 			</actions>
