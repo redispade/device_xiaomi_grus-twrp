@@ -4,6 +4,7 @@ on early-init
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    setprop ro.build.system_root_image true
     export ANDROID_ROOT /system_root
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
@@ -12,7 +13,7 @@ on fs
     install_keyring
 
     # libsecureui.so requires vendor copy of libhidlbase.so; just bind mount it
-    mount none /sbin/libhidlbase.so /vendor/lib64/libhidlbase.so
+    mount none /sbin/libhidlbase.so /vendor/lib64/libhidlbase.so bind
 
     setprop crypto.ready 1
 
