@@ -20,6 +20,10 @@
 /efsc          emmc   /dev/block/bootdevice/by-name/fsc                          flags=backup=1;subpartitionof=/efs1
 /efsg          emmc   /dev/block/bootdevice/by-name/fsg                          flags=backup=1;subpartitionof=/efs1
 
+/persist        ext4    /dev/block/bootdevice/by-name/persist                    flags=display="Persist";backup=1
+/persist_image  emmc    /dev/block/bootdevice/by-name/persist                    flags=display="Persist Image";backup=1;flashimg=1
+/splash         emmc    /dev/block/bootdevice/by-name/splash                     flags=display="Boot Logo";backup=1;flashimg=1
+/vbmeta_image   emmc     /dev/block/bootdevice/by-name/vbmeta                    flags=display="Vbmeta";flashimg=1
 
 #Internal Storage
 /storage        ext4   /data/media/0                                              flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
