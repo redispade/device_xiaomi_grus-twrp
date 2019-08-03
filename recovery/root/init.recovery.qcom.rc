@@ -4,7 +4,6 @@ on early-init
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
-    setprop ro.build.system_root_image true
     export ANDROID_ROOT /system_root
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
