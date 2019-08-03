@@ -3,9 +3,9 @@
 /dtbo          emmc   /dev/block/bootdevice/by-name/dtbo                         flags=backup=1;display="DTB Overlays";flashimg=1;subpartitionof=/boot
 /cache         ext4   /dev/block/bootdevice/by-name/cache
 /recovery      emmc   /dev/block/bootdevice/by-name/recovery                     flags=backup=1
-/system_root   ext4   /dev/block/bootdevice/by-name/system                       flags=display="System"
+/system        ext4   /dev/block/bootdevice/by-name/system                       flags=display="System";backup=1;wipeingui
+/system_root   ext4   /dev/block/bootdevice/by-name/system                       flags=display="System_Root";backup=0;wipeingui=0
 /vendor        ext4   /dev/block/bootdevice/by-name/vendor                       flags=backup=1;display="Vendor";wipeingui
-
 /system_image  emmc   /dev/block/bootdevice/by-name/system
 /vendor_image  emmc   /dev/block/bootdevice/by-name/vendor
 /data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=encryptable=footer
