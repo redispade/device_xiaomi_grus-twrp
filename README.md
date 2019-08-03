@@ -8,7 +8,7 @@ To compile:
 ```
 . build/envsetup.sh
 
-breakfast markw eng
+breakfast grus eng
 
 mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
 
