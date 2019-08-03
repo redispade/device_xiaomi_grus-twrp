@@ -1,0 +1,21 @@
+diff --git a/VintfObjectRecovery.cpp b/VintfObjectRecovery.cpp
+index 9d7cab7..75ab46e 100644
+--- a/VintfObjectRecovery.cpp
++++ b/VintfObjectRecovery.cpp
+@@ -15,6 +15,7 @@
+  */
+ 
+ #include "VintfObjectRecovery.h"
++#include "DisabledChecks.h"
+ 
+ #include <sys/mount.h>
+ #include <fs_mgr.h>
+@@ -81,7 +82,7 @@ class RecoveryPartitionMounter : public PartitionMounter {
+ int32_t VintfObjectRecovery::CheckCompatibility(
+         const std::vector<std::string> &xmls, std::string *error) {
+     static details::RecoveryPartitionMounter mounter;
+-    return details::checkCompatibility(xmls, true /* mount */, mounter, error);
++    return details::checkCompatibility(xmls, true /* mount */, mounter, error, DISABLE_AVB_CHECK);
+ }
+ 
+ 
