@@ -3342,45 +3342,10 @@
 			</button>
 
 			<button style="main_button_ver">
-				<placement x="%indent%" y="%row11a_y%"/>
-				<condition var1="tw_allow_partition_sdcard" var2="1"/>
-				<text>{@part_sd_btn=Partition SD Card}</text>
-				<actions>
-					<action function="set">partitionlisterror=0</action>
-					<action function="page">partsdcardsel</action>
-				</actions>
-			</button>
-						
-			<button style="main_button_ver">
-				<placement x="%indent%" y="%row14_y%"/>
-				<text>{@tools=Tools}</text>
-				<action function="page">tools</action>
-			</button>
-
-			<action>
-				<touch key="home"/>
-				<action function="page">main</action>
-			</action>
-
-			<action>
-				<touch key="back"/>
-				<action function="page">main</action>
-			</action>
-		</page>
-
-        <page name="tools">
-		<template name="page"/>
-
-			<text style="text_l">
-				<placement x="%col1_x_header%" y="%row3_header_y%"/>
-				<text>{@tools_hdr=Tools}</text>
-			</text>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row2_y%"/>
+				<placement x="%indent%" y="%row11_y%"/>
 				<text>{@magisk_btn=Magisk}</text>
 				<actions>
-					<action function="set">tw_back=tools</action>
+					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_filename=/tools/magisk.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3390,15 +3355,13 @@
 					<action function="set">tw_text4={@magisk_confirm=Try to install it?}</action>
 					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
 					<action function="page">tools_confirm_action</action>
-				</actions>
+				</actions>				
 			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row2_y%"/>
-				<placement x="%center_x%" y="%row5_y%"/>
+			<button style="main_button_ver">
+				<placement x="%indent%" y="%row14_y%"/>
 				<text>{@unroot_magisk_btn=Unroot Magisk}</text>
 				<actions>
-					<action function="set">tw_back=tools</action>
+					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_filename=/tools/unrootmagisk.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3410,65 +3373,11 @@
 					<action function="page">tools_confirm_action</action>
 			</actions>
 			</button>
-
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row5_y%"/>
-				<text>{@fp_scanner_btn=FP Scanner}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/fpscan.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@fp_scanner_text=FP Scanner will be launching.}</action>
-					<action function="set">tw_text4={@fp_scanner_confirm=Delete all fingerprints?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-				</actions>
-			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row5_y%"/>
-			<text>{@pass_remover_btn=Pin/Pass Remover}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/rmpass.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@pass_remover_text=Pin/Pass Remover will be launching.}</action>
-					<action function="set">tw_text4={@pass_remover_confirm=Do you remove password on system boot?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-				</actions>
-			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row8_y%"/>
-				<text>{@dm_verity_btn=Dm Verity}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/noverity.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@dm_verity_text1=Remove dm-verity protection from the kernel.}</action>
-					<action function="set">tw_text2={@dm_verity_text2=If you do not disable dm-verity,}</action>
-					<action function="set">tw_text3={@dm_verity_text3=the system will not boot.}</action>
-					<action function="set">tw_text4={@dm_verity_text4=Do you want to start now?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-				</actions>
-			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row8_y%"/>
+			<button style="main_button_ver">
+				<placement x="%indent%" y="%row17_y%"/>
 				<text>{@bat_btn=Battery Stats}</text>
 				<actions>
-					<action function="set">tw_back=tools</action>
+					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_filename=/tools/rmbat.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3480,12 +3389,11 @@
 					<action function="page">tools_confirm_action</action>
 				</actions>
 			</button>
-
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row11_y%"/>
+			<button style="main_button_ver">
+				<placement x="%indent%" y="%row20_y%"/>
 				<text>{@rm_subs_overlays_btn=RM Subs Overlays}</text>
 				<actions>
-					<action function="set">tw_back=tools</action>
+					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_filename=/tools/overlays.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3498,11 +3406,11 @@
 				</actions>
 			</button>
 			
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row11_y%"/>
+			<button style="main_button_ver">
+				<placement x="%indent%" y="%row23_y%"/>
 				<text>{@rm_all_subs_overlays_btn=RM All Subs Overlays}</text>
 				<actions>
-					<action function="set">tw_back=tools</action>
+					<action function="set">tw_back=advanced</action>
 					<action function="set">tw_filename=/tools/alloverlays.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
@@ -3514,41 +3422,6 @@
 					<action function="page">tools_confirm_action</action>
 			</actions>
 			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%indent%" y="%row14_y%"/>
-				<text>{@camera2api_enabler_btn=Camera2API Enabler}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/enablehal3.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@camera2api_enabler_text=Camera2API Enabler will be launching.}</action>
-					<action function="set">tw_text4={@camera2api_enabler_confirm=Try to install it?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-				</actions>
-			</button>
-			
-			<button style="main_button_half_height_s">
-				<placement x="%center_x%" y="%row14_y%"/>
-				<text>{@app_delete_btn=App Delete}</text>
-				<actions>
-					<action function="set">tw_back=tools</action>
-					<action function="set">tw_filename=/tools/appdel.zip</action>
-					<action function="set">tw_action=queuezip</action>
-					<action function="set">tw_has_action2=1</action>
-					<action function="set">tw_action2=flash</action>
-					<action function="set">tw_action2_param=tools_flash_zip</action>
-					<action function="set">tw_text1={@app_delete_text=App Delete will be launching.}</action>
-					<action function="set">tw_text4={@app_delete_confirm=Try to install it?}</action>
-					<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
-					<action function="page">tools_confirm_action</action>
-			</actions>
-			</button>
-			
 			<action>
 				<touch key="home"/>
 				<action function="page">main</action>
@@ -3556,10 +3429,11 @@
 
 			<action>
 				<touch key="back"/>
-				<action function="page">advanced</action>
+				<action function="page">main</action>
 			</action>
 		</page>
 
+	
 		<page name="partsdcardsel">
 			<template name="page"/>
 
