@@ -3342,7 +3342,7 @@
 			</button>
 
 			<button style="main_button_ver">
-				<placement x="%indent%" y="%row11_y%"/>
+				<placement x="%indent%" y="%row12_y%"/>
 				<text>{@magisk_btn=Magisk}</text>
 				<actions>
 					<action function="set">tw_back=advanced</action>
@@ -3374,7 +3374,7 @@
 			</actions>
 			</button>
 			<button style="main_button_ver">
-				<placement x="%indent%" y="%row17_y%"/>
+				<placement x="%indent%" y="%row16_y%"/>
 				<text>{@bat_btn=Battery Stats}</text>
 				<actions>
 					<action function="set">tw_back=advanced</action>
@@ -3390,7 +3390,7 @@
 				</actions>
 			</button>
 			<button style="main_button_ver">
-				<placement x="%indent%" y="%row20_y%"/>
+				<placement x="%indent%" y="%row18_y%"/>
 				<text>{@rm_subs_overlays_btn=RM Subs Overlays}</text>
 				<actions>
 					<action function="set">tw_back=advanced</action>
@@ -3407,7 +3407,7 @@
 			</button>
 			
 			<button style="main_button_ver">
-				<placement x="%indent%" y="%row23_y%"/>
+				<placement x="%indent%" y="%row20_y%"/>
 				<text>{@rm_all_subs_overlays_btn=RM All Subs Overlays}</text>
 				<actions>
 					<action function="set">tw_back=advanced</action>
