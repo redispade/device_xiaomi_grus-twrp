@@ -117,11 +117,53 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_USE_TOOLBOX := true
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
-
+TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_TWRPAPP := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
+
+#adbd insecure
+BOARD_ALWAYS_INSECURE := true
+
+# View button edl mode
+TW_HAS_EDL_MODE := true
+
+# Use ro.product.model
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+
+# NTFS support
+TW_INCLUDE_NTFS_3G := true
+
+# Set language default
+TW_DEFAULT_LANGUAGE := en
+
+# For Version TWRP
+TW_DEVICE_VERSION := 7beta-Mi9SE by redispade
+
+#Correct cpu temperature path
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone6/temp
+
+#enable vibration
+TW_NO_HAPTICS := false
+TW_USE_QCOM_HAPTICS_VIBRATOR := true
+
+#PIE
+PLATFORM_SDK_VERSION := 28
+
+#Brightness
+TW_DEFAULT_BRIGHTNESS := 288
+TW_MAX_BRIGHTNESS := 2047
+
+# LZMA compression for recovery's & kernel ramdisk....
+LZMA_RAMDISK_TARGETS := recovery
+
+# For Screen_timeout_secs
+TW_SCREEN_TIMEOUT_SECS := "120"
+
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
+
 
 #personal preference flags
 
