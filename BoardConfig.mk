@@ -164,6 +164,8 @@ TW_SCREEN_TIMEOUT_SECS := "120"
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+# Always use rm -rf to wipe
+TW_ALWAYS_RMRF := true
 
 #personal preference flags
 
