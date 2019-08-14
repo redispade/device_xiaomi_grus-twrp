@@ -62,14 +62,13 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_ARCH := arm64
   TARGET_KERNEL_HEADER_ARCH := arm64
-#  TARGET_KERNEL_CONFIG := kowalski_defconfig
-  TARGET_KERNEL_CONFIG := grus_defconfig
+  TARGET_KERNEL_CONFIG := kowalski_defconfig
+#  TARGET_KERNEL_CONFIG := grus_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
   TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
   TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
   TARGET_KERNEL_VERSION := 4.9
   TARGET_COMPILE_WITH_MSM_KERNEL := true
-  TARGET_KERNEL_APPEND_DTB := true
 endif
 
 #DTBO
@@ -142,7 +141,7 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 BOARD_ALWAYS_INSECURE := true
 
 # View button edl mode
-TW_HAS_EDL_MODE := true
+#TW_HAS_EDL_MODE := true
 
 # Use ro.product.model
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
@@ -154,7 +153,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_DEFAULT_LANGUAGE := en
 
 # For Version TWRP
-TW_DEVICE_VERSION := 7beta-Mi9SE by redispade
+TW_DEVICE_VERSION := 7-Mi9SE by redispade
 
 #Correct cpu temperature path
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone6/temp
