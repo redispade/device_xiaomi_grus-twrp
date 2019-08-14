@@ -14,4 +14,4 @@ mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
 
 ```
 
-Kernel source: Prebuilt, Okita Kernel 5.4
+Kernel source: Okita Kernel 6.1
