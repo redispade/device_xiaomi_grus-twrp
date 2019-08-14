@@ -14,4 +14,5 @@ mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
 
 ```
 
-Kernel source: Okita Kernel 6.1
+Kernel source: Kowalski Kernel v1.8 Stable
+https://github.com/pengus77/kowalski-grus
