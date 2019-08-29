@@ -33,7 +33,7 @@ mkdir -p "$SYSTEM_TMP"
 mount -t ext4 -o ro "$systempart" "$SYSTEM_TMP"
 usleep 100
 
-temp=`cat "$SYSTEM_TMP/system/build.prop" 2>/dev/null`
+temp=`cat "$SYSTEM_TMP/system/build.prop" /default.prop 2>/dev/null`
 
 fingerprint=`echo "$temp" | grep -F "ro.build.fingerprint=" -m 1 | cut -d'=' -f2` && resetprop "ro.build.fingerprint" "$fingerprint" &
 RELEASE=`echo "$temp" | grep -F "ro.build.version.release=" -m 1 | cut -d'=' -f2` && resetprop "ro.build.version.release" "$RELEASE" &
