@@ -65,7 +65,7 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := kowalski_defconfig
 #  TARGET_KERNEL_CONFIG := grus_defconfig
   TARGET_KERNEL_CLANG_COMPILE := true
-  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+  TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-androidkernel-
   TARGET_KERNEL_SOURCE := kernel/xiaomi/grus
   TARGET_KERNEL_VERSION := 4.9
   TARGET_COMPILE_WITH_MSM_KERNEL := true
@@ -111,7 +111,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
 BOARD_BUILD_DISABLED_VBMETAIMAGE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -152,9 +152,6 @@ TW_INCLUDE_NTFS_3G := true
 # Set language default
 TW_DEFAULT_LANGUAGE := en
 
-# For Version TWRP
-TW_DEVICE_VERSION := 7a-Mi9SE by redispade
-
 #Correct cpu temperature path
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone6/temp
 
@@ -182,5 +179,9 @@ ENABLE_SCHEDBOOST := true
 #TW_ALWAYS_RMRF := true
 
 #personal preference flags
+
+# Custom TWRP Version
+TW_DEVICE_VERSION := 8-Mi9SE by redispade
+
 
 -include vendor/redispade/recovery/config.mk
