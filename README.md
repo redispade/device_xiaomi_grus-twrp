@@ -14,5 +14,5 @@ mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
 
 ```
 
-Kernel source: Kowalski Kernel v1.8 Stable
+Kernel source: Kowalski Kernel v1.9.1 Stable
 https://github.com/pengus77/kowalski-grus

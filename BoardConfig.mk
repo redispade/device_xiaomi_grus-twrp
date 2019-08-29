@@ -57,7 +57,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_SEPARATED_DTBO := true
-#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_ARCH := arm64
@@ -128,7 +128,7 @@ TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_USE_TOOLBOX := false
+TW_USE_TOOLBOX := true
 TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
 TW_NO_SCREEN_BLANK := true
@@ -181,7 +181,7 @@ ENABLE_SCHEDBOOST := true
 #personal preference flags
 
 # Custom TWRP Version
-TW_DEVICE_VERSION := 8-Mi9SE by redispade
+TW_DEVICE_VERSION :=8-Mi9SE by redispade
 
 
 -include vendor/redispade/recovery/config.mk
