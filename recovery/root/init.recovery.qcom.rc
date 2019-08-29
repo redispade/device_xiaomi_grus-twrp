@@ -1,5 +1,6 @@
 on early-init
     mkdir /firmware 0771 system system
+    start fingerprintid
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -59,6 +60,15 @@ service keymaster-4-0 /sbin/android.hardware.keymaster@4.0-service-qti
     user root
     group root
     disabled
+    seclabel u:r:recovery:s0
+
+
+# read ro.build.fingerprint from system, setprop it. for ota
+service fingerprintid /init.fingerprintid.sh > /tmp/finger.log
+    oneshot
+    disabled
+    user root
+    group root
     seclabel u:r:recovery:s0
 
 on boot
