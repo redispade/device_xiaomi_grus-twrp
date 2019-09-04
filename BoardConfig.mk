@@ -133,6 +133,7 @@ TW_Y_OFFSET := 80
 TW_H_OFFSET := -80
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_TWRPAPP := true
+TW_IGNORE_MISC_WIPE_DATA := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -174,9 +175,6 @@ TW_SCREEN_TIMEOUT_SECS := "120"
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-
-# Always use rm -rf to wipe
-#TW_ALWAYS_RMRF := true
 
 #personal preference flags
 
