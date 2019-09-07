@@ -74,7 +74,7 @@
 	</resources>
 
 	<variables>
-		<variable name="tw_samsung_navbar" value="0" persist="1"/>
+		<variable name="tw_samsung_navbar" value="1" persist="1"/>
 		<variable name="aromafm" value="1" persist="1"/>
 		<variable name="tw_hide_kb" value="0"/>
 		<variable name="screen_width" value="1080"/>
@@ -177,9 +177,9 @@
 		<variable name="navbar_btn_y" value="1856"/>
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
-		<variable name="background_color" value="#1A1A1A"/>
-		<variable name="accent_color" value="#0090CA"/>
-		<variable name="accent_color_semitransparent" value="#0090CA30"/>
+		<variable name="background_color" value="#000000"/>
+		<variable name="accent_color" value="#800000"/>
+		<variable name="accent_color_semitransparent" value="#80000030"/>
 		<variable name="text_color" value="#EEEEEE"/>
 		<variable name="text_button_color" value="#EEEEEE"/>
 		<variable name="text_success_color" value="#76FF03"/>
@@ -190,7 +190,7 @@
 		<variable name="semi_transparent" value="#00000099"/>
 		<variable name="warning" value="#F8F8A0"/>
 		<variable name="error" value="#FF0101"/>
-		<variable name="highlight" value="#0090CA"/>
+		<variable name="highlight" value="#990000"/>
 		<variable name="fileselector_linecolor" value="#555555"/>
 		<variable name="fileselector_highlight_color" value="#555555"/>
 		<variable name="fileselector_separatorheight" value="2"/>

@@ -17,9 +17,9 @@
 	<variables>
 		<variable name="screen_width" value="1080"/>
 		<variable name="screen_height" value="1920"/>
-		<variable name="background_color" value="#222222"/>
-		<variable name="header_color" value="#555555"/>
-		<variable name="accent_color" value="#0090CA"/>
+		<variable name="background_color" value="#000000"/>
+		<variable name="header_color" value="#450000"/>
+		<variable name="accent_color" value="#800000"/>
 	</variables>
 
 	<pages>
@@ -32,7 +32,7 @@
 
 			<image>
 				<image resource="splashlogo"/>
-				<placement x="540" y="456" placement="4"/>
+				<placement x="540" y="756" placement="4"/>
 			</image>
 
 			<image>

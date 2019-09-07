@@ -181,7 +181,6 @@ ENABLE_SCHEDBOOST := true
 #personal preference flags
 
 # Custom TWRP Version
-TW_DEVICE_VERSION :=8-Mi9SE by redispade
-
+TW_DEVICE_VERSION :=9beta-Mi9SE by redispade
 
 -include vendor/redispade/recovery/config.mk
