@@ -48,3 +48,4 @@
 /storage        ext4   /data/media/0                                              flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 # Removable storage
 /usb_otg       vfat   /dev/block/sdg1                    /dev/block/sdg          flags=display="USB OTG";storage;wipeingui;removable
+/usb_otg       vfat   /dev/block/sdh1                    /dev/block/sdh          flags=display="USB OTG(Secondary)";storage;wipeingui;removable
