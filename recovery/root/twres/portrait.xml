@@ -2691,7 +2691,7 @@
 
 		<page name="system_readonly_check">
 			<action>
-				<action function="checkpartitionlifetimewrites">/system</action>
+				<action function="checkpartitionlifetimewrites">/system_root</action>
 			</action>
 
 			<action>
