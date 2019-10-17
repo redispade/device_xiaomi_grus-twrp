@@ -32,10 +32,10 @@ else
     etc=$mnt$magisk/etc;
     bin=$mnt$magisk/bin;
   else
-    mount -o ro /system 2>/dev/null;
-    test -f /system/system/build.prop && root=/system;
-    etc=$root/system/etc;
-    bin=$root/system/xbin;
+    etc=$root/nano/etc;
+    bin=$root/nano/xbin;
+    chmod +x $bin/nano.bin
+    chmod +x $bin/nano
   fi;
 fi;
 
