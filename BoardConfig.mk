@@ -123,7 +123,6 @@ RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -146,11 +145,14 @@ BOARD_ALWAYS_INSECURE := true
 # View button edl mode
 #TW_HAS_EDL_MODE := true
 
-# Use ro.product.model
+# Use ro.product.model - backup folder is named like model not like serial number (default)
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # NTFS support
 TW_INCLUDE_NTFS_3G := true
+
+# exclude su module
+TW_EXCLUDE_SUPERSU := true
 
 # Set language default
 TW_DEFAULT_LANGUAGE := en
@@ -180,7 +182,20 @@ ENABLE_SCHEDBOOST := true
 
 #personal preference flags
 
+# TWRP Debugging
+TWRP_EVENT_LOGGING := true
+TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_RECOVERY_DEVICE_MODULES += strace
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $($(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace
+TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
+TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
+
 # Custom TWRP Version
-TW_DEVICE_VERSION :=10beta2-Mi9SE by redispade
+TW_DEVICE_VERSION :=10beta11-Mi9SE by redispade
+
+# supress error messages while building
+ALLOW_MISSING_DEPENDENCIES := true
+
 
 -include vendor/redispade/recovery/config.mk
