@@ -7,7 +7,7 @@
 /vendor        ext4   /dev/block/bootdevice/by-name/vendor                       flags=backup=1;display="Vendor";wipeingui
 /system_image  emmc   /dev/block/bootdevice/by-name/system                       flags=flashimg;display="System Image"
 /vendor_image  emmc   /dev/block/bootdevice/by-name/vendor                       flags=flashimg;display="Vendor Image"
-# orignial from redispade
+# original
 # /data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=forceencrypt=footer;length=-16384;
 # forced encryption
 /data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=forceencrypt=footer;length=-16384;;fileencryption=ice:aes-256-cts
@@ -24,9 +24,11 @@
 /efsg          emmc   /dev/block/bootdevice/by-name/fsg                          flags=backup=1;subpartitionof=/efs1
 /persist        ext4    /dev/block/bootdevice/by-name/persist                    flags=display="Persist";backup=1
 /persist_image  emmc    /dev/block/bootdevice/by-name/persist                    flags=display="Persist Image";backup=1;flashimg=1
+/persistbak       ext4     /dev/block/bootdevice/by-name/persistbak   		 flags=display="Persist_backup";backup=1
+/persistbak_image emmc     /dev/block/bootdevice/by-name/persistbak   		 flags=display="Persist_backup";flashimg=1
 /splash         emmc    /dev/block/bootdevice/by-name/splash                     flags=display="Boot Logo";backup=1;flashimg=1
 /vbmeta_image   emmc     /dev/block/bootdevice/by-name/vbmeta                    flags=display="Vbmeta";flashimg=1
-
+/tz               emmc     /dev/block/bootdevice/by-name/tz           		 flags=display="tz";backup=1;flashimg=1
 
 
 /misc             emmc     /dev/block/bootdevice/by-name/misc

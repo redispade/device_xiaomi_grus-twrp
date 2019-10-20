@@ -183,7 +183,7 @@ ENABLE_SCHEDBOOST := true
 #personal preference flags
 
 # TWRP Debugging
-TWRP_EVENT_LOGGING := true
+TWRP_EVENT_LOGGING := false
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_RECOVERY_DEVICE_MODULES += strace
@@ -192,7 +192,7 @@ TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
 
 # Custom TWRP Version
-TW_DEVICE_VERSION :=10beta11-Mi9SE by redispade
+TW_DEVICE_VERSION :=10-Mi9SE by redispade
 
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
