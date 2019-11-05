@@ -9,9 +9,11 @@ To compile:
 
 breakfast grus eng
 
-mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
+mka adbd recoveryimage
 
 ```
 
-Kernel source: Kowalski Kernel
+Kernel source: Kowalski Kernel fork, modded for twrp:
+https://github.com/redispade/kowalski-grus
+Original kernel:
 https://github.com/pengus77/kowalski-grus
