@@ -1,7 +1,6 @@
 # android_device_xiaomi_grus
 
-For building TWRP for Xiaomi Mi 9 SE ONLY
-Based on Kudproject device tree for Grus
+Android 10 (and 9-compatible) TWRP Device tree for Xiaomi Mi9SE(grus)
 
 To compile:
 
@@ -14,5 +13,5 @@ mka adbd recoveryimage ALLOW_MISSING_DEPENDENCIES=true
 
 ```
 
-Kernel source: Kowalski Kernel Stable
+Kernel source: Kowalski Kernel
 https://github.com/pengus77/kowalski-grus
