@@ -22,9 +22,13 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
+# Maintainer name
+SHRP_MAINTAINER := matt_zer01
+# Device codename
+SHRP_DEVICE_CODE := grus
 
 DEVICE_PATH := device/xiaomi/grus
-
+SHRP_REC := /dev/block/sda26
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -190,12 +194,7 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $($(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace
 TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
-
 # Custom TWRP Version
 TW_DEVICE_VERSION :=12-Mi9SE by redispade
-
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
-
-
--include vendor/redispade/recovery/config.mk
