@@ -1,7 +1,7 @@
 # android_device_xiaomi_grus
 
 Android 10 (and 9-compatible) TWRP Device tree for Xiaomi Mi9SE(grus)
-Compatible with SHRP
+ - Adapted for SHRP
 
 To compile:
 
