@@ -197,5 +197,7 @@ TW_DEVICE_VERSION :=15-Mi9SE by redispade
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
 
+#Build resetprop from source
+TW_INCLUDE_RESETPROP := true
 
 -include vendor/redispade/recovery/config.mk
