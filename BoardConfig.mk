@@ -147,6 +147,7 @@ TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
 
 #adbd insecure
 BOARD_ALWAYS_INSECURE := true
@@ -192,7 +193,7 @@ ENABLE_SCHEDBOOST := true
 #personal preference flags
 
 # Custom TWRP Version
-TW_DEVICE_VERSION :=15-Mi9SE by redispade
+TW_DEVICE_VERSION :=16-Mi9SE by redispade
 
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
