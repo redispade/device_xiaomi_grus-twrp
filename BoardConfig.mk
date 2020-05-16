@@ -200,4 +200,7 @@ ALLOW_MISSING_DEPENDENCIES := true
 #Build resetprop from source
 TW_INCLUDE_RESETPROP := true
 
+#Copy some props from installed system
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint"
+
 -include vendor/redispade/recovery/config.mk
