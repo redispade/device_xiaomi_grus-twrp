@@ -192,7 +192,7 @@ ENABLE_SCHEDBOOST := true
 #personal preference flags
 
 # Custom TWRP Version
-TW_DEVICE_VERSION :=16-Mi9SE by redispade
+TW_DEVICE_VERSION :=17-Mi9SE by redispade
 
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
@@ -201,6 +201,5 @@ ALLOW_MISSING_DEPENDENCIES := true
 TW_INCLUDE_RESETPROP := true
 
 #Copy some props from installed system
-TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint"
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.sdk;ro.build.version.security_patch;ro.build.version.release"
 
--include vendor/redispade/recovery/config.mk
