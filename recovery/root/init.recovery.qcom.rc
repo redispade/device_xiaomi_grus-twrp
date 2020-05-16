@@ -97,18 +97,8 @@ on property:twrp.decrypt.done=true
 
 
 on early-init
-    start fingerprintid
     # Enable double-tap to wake
     #write /sys/devices/virtual/touch/tp_dev/gesture_on 1
-
-# read ro.build.fingerprint from system, setprop it. for ota
-service fingerprintid /init.fingerprintid.sh
-    oneshot
-    disabled
-    user root
-    group root
-    seclabel u:r:recovery:s0
-
 
 on boot
     # Enable Power modes and set the CPU Freq Sampling rates
