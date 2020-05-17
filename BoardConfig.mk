@@ -155,10 +155,6 @@ TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 
 # NTFS support
 TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_FUSE_NTFS := true
-
-# exFAT FS Support
-TW_INCLUDE_FUSE_EXFAT := true
 
 # exclude su module
 TW_EXCLUDE_SUPERSU := true
