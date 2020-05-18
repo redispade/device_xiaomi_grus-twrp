@@ -199,3 +199,28 @@ TW_INCLUDE_RESETPROP := true
 #Copy some props from installed system
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.sdk;ro.build.version.security_patch;ro.build.version.release"
 
+# Path of your SHRP Tree
+SHRP_PATH := device/xiaomi/grus
+
+# Maintainer name
+SHRP_MAINTAINER := redispade
+# Device codename
+SHRP_DEVICE_CODE := grus
+
+SHRP_EDL_MODE := 0
+
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
+
+SHRP_REC_TYPE := Treble
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# Recovery Type (It can be A/B or A_only) [Only for About Section]
+SHRP_DEVICE_TYPE := A_Only
+# SHRP Padding Flag (Only for rounded corner devices.)
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
