@@ -691,5 +691,5 @@
 		<string name="confirm_tool">Confirm the execution of the tool</string>
 		<string name="install_tool_count_hdr">Installation started</string>
 		<string name="install_tool_hdr">Install Tool</string>
-	</resources>
+    </resources>
 </language>

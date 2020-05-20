@@ -26,9 +26,27 @@
 SHRP_MAINTAINER := matt_zer01
 # Device codename
 SHRP_DEVICE_CODE := grus
-
-DEVICE_PATH := device/xiaomi/grus
 SHRP_REC := /dev/block/sda26
+# Path of your SHRP Tree
+SHRP_PATH := device/xiaomi/grus
+SHRP_EDL_MODE := 0
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
+
+SHRP_REC_TYPE := Treble
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# Recovery Type (It can be A/B or A_only) [Only for About Section]
+SHRP_DEVICE_TYPE := A_Only
+# SHRP Padding Flag (Only for rounded corner devices.)
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+SHRP_EXPRESS := true
+
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -41,7 +59,7 @@ TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a75
-
+TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Bootloader
@@ -112,11 +130,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-# Android Verified Boot
-BOARD_AVB_ENABLE := false
-BOARD_BUILD_DISABLED_VBMETAIMAGE := true
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
-
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
@@ -137,11 +150,21 @@ TW_H_OFFSET := -80
 TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_TWRPAPP := true
 TW_IGNORE_MISC_WIPE_DATA := true
-TWRP_INCLUDE_LOGCAT := true
+TW_SKIP_COMPATIBILITY_CHECK := true
+
+# TWRP Debugging
+TWRP_EVENT_LOGGING := false
 TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_RECOVERY_DEVICE_MODULES += strace
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $($(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace
+TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
+TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
+
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
+PLATFORM_VERSION := 16.1.0
 
 #adbd insecure
 BOARD_ALWAYS_INSECURE := true
@@ -185,7 +208,6 @@ ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
 #personal preference flags
-
 # TWRP Debugging
 TWRP_EVENT_LOGGING := false
 TARGET_USES_LOGD := true
@@ -198,3 +220,17 @@ TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
 TW_DEVICE_VERSION :=12-Mi9SE by redispade
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
+=======
+# Custom TWRP Version
+TW_DEVICE_VERSION :=18-Mi9SE by redispade
+
+# supress error messages while building
+ALLOW_MISSING_DEPENDENCIES := true
+
+#Build resetprop from source
+TW_INCLUDE_RESETPROP := true
+
+#Copy some props from installed system
+TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.sdk;ro.build.version.security_patch;ro.build.version.release"
+
+

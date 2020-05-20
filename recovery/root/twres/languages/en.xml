@@ -719,6 +719,10 @@
 		<string name="include_kernel_log">Include Kernel Log</string>
 		<string name="sha2_chk">Use SHA2 for hashing</string>
 		<string name="unable_set_boot_slot">Error changing bootloader boot slot to {1}</string>
+		<string name="unmount_sys_install">Unmount System before installing a ZIP</string>
+		<string name="unmount_system">Unmounting System...</string>
+		<string name="unmount_system_err">Failed unmounting System</string>
+		<string name="fbe_wipe_msg">WARNING: {1} wiped. FBE device should be booted into Android and not Recovery to set initial FBE policy after wipe.</string>
 <!--mod tools-->
 		<string name="tools_hdr">Tools</string>
 		<string name="tools">Tools</string>
@@ -768,6 +772,6 @@
 		<string name="bat_text">Battery Stats</string>
 		<string name="confirm_tool">Confirm the execution of the tool</string>
 		<string name="install_tool_count_hdr">Installation started</string>
-		<string name="install_tool_hdr">Install Tool</string>
+		<string name="install_tool_hdr">Install Tool</string>		
 	</resources>
 </language>

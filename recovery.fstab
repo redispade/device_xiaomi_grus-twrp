@@ -1,25 +1,16 @@
 # mount point  fstype device                             device2              flags
-/boot          emmc   /dev/block/bootdevice/by-name/boot			 flags=backup=1;display="Boot";flashimg
+/boot          emmc   /dev/block/bootdevice/by-name/boot			             flags=backup=1;display="Boot";flashimg
 /dtbo          emmc   /dev/block/bootdevice/by-name/dtbo                         flags=backup=1;display="DTB Overlays";flashimg=1;subpartitionof=/boot
-/cache         ext4   /dev/block/bootdevice/by-name/cache			 flags=backup=1;wipeingui;wipeduringfactoryreset
-/recovery      emmc   /dev/block/bootdevice/by-name/recovery                     flags=backup=1;flashimg=1
-/system_root   ext4   /dev/block/bootdevice/by-name/system                       flags=display="System";backup=1
-/vendor        ext4   /dev/block/bootdevice/by-name/vendor                       flags=backup=1;display="Vendor";wipeingui
-/system_image  emmc   /dev/block/bootdevice/by-name/system                       flags=flashimg;display="System Image"
-/vendor_image  emmc   /dev/block/bootdevice/by-name/vendor                       flags=flashimg;display="Vendor Image"
-# original
-# /data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=forceencrypt=footer;length=-16384;
-# forced encryption
-/data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=forceencrypt=footer;length=-16384;fileencryption=ice:aes-256-cts
-# optional encryption
-# /data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=encryptable=footer;length=-16384;fileencryption=ice:aes-256-cts
-
+/cache         ext4   /dev/block/bootdevice/by-name/cache			             flags=wipeingui;wipeduringfactoryreset
+/recovery      emmc   /dev/block/bootdevice/by-name/recovery                     flags=flashimg=1
+/system_root   ext4   /dev/block/bootdevice/by-name/system                       flags=display="System";backup=0
+/vendor        ext4   /dev/block/bootdevice/by-name/vendor                       flags=backup=0;display="Vendor";wipeingui
+/data          ext4   /dev/block/bootdevice/by-name/userdata                     flags=fileencryption=ice:aes-256-cts
 #Internal Storage
-/storage        ext4   /data/media/0                                              flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
-
+/storage        ext4   /data/media/0                                             flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 
 /firmware      vfat   /dev/block/bootdevice/by-name/modem                        flags=display="Firmware";mounttodecrypt
-/cust          ext4   /dev/block/bootdevice/by-name/cust                         flags=display="Cust";backup=1
+/cust          ext4   /dev/block/bootdevice/by-name/cust                         flags=display="Cust";
 /modem         emmc   /dev/block/bootdevice/by-name/modem                        flags=backup=1;display="Modem"
 /bluetooth     emmc   /dev/block/bootdevice/by-name/bluetooth                    flags=backup=1;subpartitionof=/modem
 /dsp           emmc   /dev/block/bootdevice/by-name/dsp                          flags=backup=1;subpartitionof=/modem
@@ -27,33 +18,12 @@
 /efs2          emmc   /dev/block/bootdevice/by-name/modemst2                     flags=backup=1;subpartitionof=/efs1
 /efsc          emmc   /dev/block/bootdevice/by-name/fsc                          flags=backup=1;subpartitionof=/efs1
 /efsg          emmc   /dev/block/bootdevice/by-name/fsg                          flags=backup=1;subpartitionof=/efs1
-/persist        ext4    /dev/block/bootdevice/by-name/persist                    flags=display="Persist";backup=1
-/persist_image  emmc    /dev/block/bootdevice/by-name/persist                    flags=display="Persist Image";backup=1;flashimg=1
-/persistbak       ext4     /dev/block/bootdevice/by-name/persistbak   		 flags=display="Persist_backup";backup=1
-/persistbak_image emmc     /dev/block/bootdevice/by-name/persistbak   		 flags=display="Persist_backup";backup=1;flashimg=1
-/splash         emmc    /dev/block/bootdevice/by-name/splash                     flags=display="Boot Logo";backup=1;flashimg=1
-/vbmeta_image   emmc     /dev/block/bootdevice/by-name/vbmeta                    flags=display="Vbmeta";flashimg=1
-/tz               emmc     /dev/block/bootdevice/by-name/tz           		 flags=display="tz";backup=1;flashimg=1
-/misc             emmc     /dev/block/bootdevice/by-name/misc
-/keystore         emmc     /dev/block/bootdevice/by-name/keystore
-/ssd              emmc     /dev/block/bootdevice/by-name/ssd
-/frp              emmc     /dev/block/bootdevice/by-name/frp
-/ddr              emmc     /dev/block/bootdevice/by-name/ddr
-/devinfo          emmc     /dev/block/bootdevice/by-name/devinfo
-/fsc              emmc     /dev/block/bootdevice/by-name/fsc
-/sec              emmc     /dev/block/bootdevice/by-name/sec
-/fsg              emmc     /dev/block/bootdevice/by-name/fsg          flags=display="fsg";backup=1
-/abl              emmc     /dev/block/bootdevice/by-name/abl          flags=display="abl";backup=1;flashimg=1
-/xbl              emmc     /dev/block/bootdevice/by-name/xbl          flags=display="xbl";backup=1;flashimg=1
-/msadp            emmc     /dev/block/bootdevice/by-name/msadp        flags=display="msadp";backup=1;flashimg=1
-/apdp             emmc     /dev/block/bootdevice/by-name/apdp         flags=display="apdp";backup=1;flashimg=1
-/cmnlib64         emmc     /dev/block/bootdevice/by-name/cmnlib64     flags=display="cmnlib64";backup=1;flashimg=1
-/cmnlib           emmc     /dev/block/bootdevice/by-name/cmnlib       flags=display="cmnlib";backup=1;flashimg=1
-/keymaster        emmc     /dev/block/bootdevice/by-name/keymaster    flags=display="keymaster";backup=1;flashimg=1
-/hyp              emmc     /dev/block/bootdevice/by-name/hyp          flags=display="hyp";backup=1;flashimg=1
-/devcfg           emmc     /dev/block/bootdevice/by-name/devcfg       flags=display="devcfg";backup=1;flashimg=1
 
+/persist        ext4    /dev/block/bootdevice/by-name/persist                    flags=display="Persist"
+/persist_image  emmc    /dev/block/bootdevice/by-name/persist                    flags=display="Persist Image";backup=1;flashimg=1
+
+/system_image  emmc   /dev/block/bootdevice/by-name/system                       flags=flashimg;backup=1;display="System Image"
+/vendor_image  emmc   /dev/block/bootdevice/by-name/vendor                       flags=flashimg;backup=1;display="Vendor Image"
 
 # Removable storage
 /usb_otg       vfat   /dev/block/sdg1                    /dev/block/sdg          flags=display="USB OTG";storage;wipeingui;removable
-/usb_otg       vfat   /dev/block/sdh1                    /dev/block/sdh          flags=display="USB OTG(Secondary)";storage;wipeingui;removable
