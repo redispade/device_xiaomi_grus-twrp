@@ -45,7 +45,8 @@ SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
 # SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
 SHRP_EXPRESS := true
-
+# Official tag
+SHRP_OFFICIAL := true
 
 # Architecture
 TARGET_ARCH := arm64
