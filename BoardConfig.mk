@@ -221,7 +221,6 @@ TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
 TW_DEVICE_VERSION :=12-Mi9SE by redispade
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
-=======
 # Custom TWRP Version
 TW_DEVICE_VERSION :=18-Mi9SE by redispade
 
