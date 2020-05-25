@@ -23,6 +23,8 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+DEVICE_PATH := device/xiaomi/grus
+
 # SHRP Flags
 SHRP_MAINTAINER := matt_zer01
 SHRP_DEVICE_CODE := grus
