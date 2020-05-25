@@ -22,30 +22,22 @@
 # bitrot and build breakages. Building a component unconditionally does
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
-# Maintainer name
+
+# SHRP Flags
 SHRP_MAINTAINER := matt_zer01
-# Device codename
 SHRP_DEVICE_CODE := grus
 SHRP_REC := /dev/block/sda26
-# Path of your SHRP Tree
 SHRP_PATH := device/xiaomi/grus
 SHRP_EDL_MODE := 0
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
-
-# Put 0 to disable flashlight
 SHRP_FLASH := 1
-
 SHRP_REC_TYPE := Treble
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
-# Recovery Type (It can be A/B or A_only) [Only for About Section]
 SHRP_DEVICE_TYPE := A_Only
-# SHRP Padding Flag (Only for rounded corner devices.)
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
-# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
 SHRP_EXPRESS := true
-# Official tag
 SHRP_OFFICIAL := true
 
 # Architecture
@@ -67,6 +59,10 @@ TARGET_USES_64_BIT_BINDER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm710
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
+
+# CPU
+ENABLE_CPUSETS := true
+ENABLE_SCHEDBOOST := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA90000 androidboot.hardware=qcom androidboot.console=ttyMSM0
@@ -152,8 +148,11 @@ TW_NO_SCREEN_BLANK := true
 TW_EXCLUDE_TWRPAPP := true
 TW_IGNORE_MISC_WIPE_DATA := true
 TW_SKIP_COMPATIBILITY_CHECK := true
-
-# TWRP Debugging
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_INCLUDE_NTFS_3G := true
+TW_EXCLUDE_SUPERSU := true
+TW_DEFAULT_LANGUAGE := en
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone6/temp
 TWRP_EVENT_LOGGING := false
 TARGET_USES_LOGD := true
 TWRP_INCLUDE_LOGCAT := true
@@ -161,7 +160,12 @@ TARGET_RECOVERY_DEVICE_MODULES += strace
 TW_RECOVERY_ADDITIONAL_RELINK_FILES += $($(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace
 TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
-
+TW_NO_HAPTICS := false
+TW_USE_QCOM_HAPTICS_VIBRATOR := true
+TW_DEFAULT_BRIGHTNESS := 288
+TW_MAX_BRIGHTNESS := 2047
+TW_SCREEN_TIMEOUT_SECS := "120"
+TW_INCLUDE_RESETPROP := true
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
@@ -170,67 +174,16 @@ PLATFORM_VERSION := 16.1.0
 #adbd insecure
 BOARD_ALWAYS_INSECURE := true
 
-# View button edl mode
-#TW_HAS_EDL_MODE := true
-
-# Use ro.product.model - backup folder is named like model not like serial number (default)
-TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-
-# NTFS support
-TW_INCLUDE_NTFS_3G := true
-
-# exclude su module
-TW_EXCLUDE_SUPERSU := true
-
-# Set language default
-TW_DEFAULT_LANGUAGE := en
-
-#Correct cpu temperature path
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone6/temp
-
-#enable vibration
-TW_NO_HAPTICS := false
-TW_USE_QCOM_HAPTICS_VIBRATOR := true
-
-#PIE
+# SDK Version
 PLATFORM_SDK_VERSION := 28
-
-#Brightness
-TW_DEFAULT_BRIGHTNESS := 288
-TW_MAX_BRIGHTNESS := 2047
 
 # LZMA compression for recovery's & kernel ramdisk....
 LZMA_RAMDISK_TARGETS := recovery
 
-# For Screen_timeout_secs
-TW_SCREEN_TIMEOUT_SECS := "120"
-
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
-
-#personal preference flags
-# TWRP Debugging
-TWRP_EVENT_LOGGING := false
-TARGET_USES_LOGD := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_RECOVERY_DEVICE_MODULES += strace
-TW_RECOVERY_ADDITIONAL_RELINK_FILES += $($(TARGET_OUT_OPTIONAL_EXECUTABLES)/strace
-TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
-TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
-# Custom TWRP Version
-TW_DEVICE_VERSION :=12-Mi9SE by redispade
-# supress error messages while building
-ALLOW_MISSING_DEPENDENCIES := true
-# Custom TWRP Version
-TW_DEVICE_VERSION :=18-Mi9SE by redispade
-
-# supress error messages while building
+# Supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
 
-#Build resetprop from source
-TW_INCLUDE_RESETPROP := true
-
-#Copy some props from installed system
+# Copy some props from installed system
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.sdk;ro.build.version.security_patch;ro.build.version.release"
 
 
