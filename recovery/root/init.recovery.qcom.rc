@@ -84,7 +84,7 @@ on property:ro.crypto.state=unencrypted
     stop servicemanager
     stop hwservicemanager
 
-on property:twrp.decrypt.done=true
+on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
     stop sbinqseecomd
     stop keymaster-4-0
     stop gatekeeper-1-0
@@ -97,7 +97,7 @@ on property:twrp.decrypt.done=true
 
 
 on early-init
-    # Enable double-tap to wake
+    setprop recovery.perf.mode 1
     #write /sys/devices/virtual/touch/tp_dev/gesture_on 1
 
 on boot
