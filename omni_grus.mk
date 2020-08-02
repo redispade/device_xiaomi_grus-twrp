@@ -45,6 +45,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Copy updated tzdata
 PRODUCT_COPY_FILES += system/timezone/output_data/iana/tzdata:recovery/root/system_root/system/usr/share/zoneinfo/tzdata
 
+# Copy Logo
+PRODUCT_COPY_FILES += device/xiaomi/grus/splashlogo.png:recovery/root/twres/images/splashlogo.png
+
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.security_patch=2099-12-31
