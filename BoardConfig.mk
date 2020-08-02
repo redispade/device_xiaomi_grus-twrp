@@ -185,6 +185,11 @@ TW_SCREEN_TIMEOUT_SECS := "120"
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+#Init
+TARGET_INIT_VENDOR_LIB := libinit_grus
+TARGET_RECOVERY_DEVICE_MODULES := libinit_grus
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
+
 #personal preference flags
 
 # Custom TWRP Version
@@ -199,3 +204,4 @@ TW_INCLUDE_RESETPROP := true
 #Copy some props from installed system
 TW_OVERRIDE_SYSTEM_PROPS := "ro.build.product;ro.build.fingerprint=ro.system.build.fingerprint;ro.build.version.sdk;ro.build.version.security_patch;ro.build.version.release"
 
+TW_INCLUDE_REPACKTOOLS := true
