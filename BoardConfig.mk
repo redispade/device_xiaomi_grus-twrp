@@ -193,7 +193,7 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 #personal preference flags
 
 # Custom TWRP Version
-TW_DEVICE_VERSION :=1-Mi9SE by redispade
+TW_DEVICE_VERSION :=2-Mi9SE by redispade
 
 # supress error messages while building
 ALLOW_MISSING_DEPENDENCIES := true
