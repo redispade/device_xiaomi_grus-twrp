@@ -43,7 +43,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     sys.usb.controller=a600000.dwc3
 
 # Copy updated tzdata
-PRODUCT_COPY_FILES += system/timezone/output_data/iana/tzdata:recovery/root/system_root/system/usr/share/zoneinfo/tzdata
+#PRODUCT_COPY_FILES += system/timezone/output_data/iana/tzdata:recovery/root/system_root/system/usr/share/zoneinfo/tzdata
+PRODUCT_PACKAGES += \
+    tzdata_twrp
 
 # Copy Logo
 PRODUCT_COPY_FILES += device/xiaomi/grus/splashlogo.png:recovery/root/twres/images/splashlogo.png
